@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Social Media Logos */}
         <div className="flex justify-center space-x-8 mb-6">
         <a
-        href="https://x.com/Sar_1707"
+        href="https://x.com"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-500 transition duration-300"
@@ -18,7 +18,7 @@ const Footer = () => {
         <RxTwitterLogo size={30} />
       </a>
       <a
-        href="https://discord.com/channels/1159146971819425862/1159146971819425865"
+        href="https://discord.com"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-indigo-600 transition duration-300"
@@ -26,7 +26,7 @@ const Footer = () => {
         <FaDiscord size={30} />
       </a>
       <a
-        href="https://www.linkedin.com/in/sarvesh-gupta17/"
+        href="https://www.linkedin.com"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-700 transition duration-300"
@@ -34,7 +34,7 @@ const Footer = () => {
         <FaLinkedin size={30} />
       </a>
       <a
-        href="https://www.instagram.com/sarvesh_1703/"
+        href="https://www.instagram.com"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-pink-500 transition duration-300"
@@ -42,7 +42,7 @@ const Footer = () => {
         <FaInstagram size={30} />
       </a>
       <a
-        href="https://www.youtube.com/@SarveshGupta1707"
+        href="https://www.youtube.com"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-red-600 transition duration-300"
@@ -53,7 +53,7 @@ const Footer = () => {
 
         {/* Copyright Text */}
         <div className="mb-4">
-          <p>Copyright © 2024 Sarvesh. All Rights Reserved.</p>
+          <p>Copyright © 2024 Vaishali. All Rights Reserved.</p>
         </div>
 
         {/* Legal Links */}
