@@ -20,7 +20,7 @@ export default function PostForm({ post }) {
 
     const submit = async (data) => {
         if (post) {
-            const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
+            const file = data.image?.[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
             if (file) {
                 appwriteService.deleteFile(post.featuredImage);
@@ -35,16 +35,19 @@ export default function PostForm({ post }) {
                 navigate(`/post/${dbPost.$id}`);
             }
         } else {
-            const file = await appwriteService.uploadFile(data.image[0]);
+            const file = data.image?.[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
             if (file) {
-                const fileId = file.$id;
-                data.featuredImage = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
+                data.featuredImage = file.$id;
+            }
 
-                if (dbPost) {
-                    navigate(`/post/${dbPost.$id}`);
-                }
+            const dbPost = await appwriteService.createPost({
+                ...data,
+                userId: userData.$id,
+            });
+
+            if (dbPost) {
+                navigate(`/post/${dbPost.$id}`);
             }
         }
     };
@@ -96,7 +99,7 @@ export default function PostForm({ post }) {
                     type="file"
                     className="mb-4"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
-                    {...register("image", { required: !post })}
+                    {...register("image")}
                 />
                 {post && (
                     <div className="w-full mb-4">
