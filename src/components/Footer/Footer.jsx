@@ -53,7 +53,7 @@ const Footer = () => {
 
         {/* Copyright Text */}
         <div className="mb-4">
-          <p>Copyright © 2024 Vaishali. All Rights Reserved.</p>
+          <p>Copyright © 2024 Sarvesh. All Rights Reserved.</p>
         </div>
 
         {/* Legal Links */}
